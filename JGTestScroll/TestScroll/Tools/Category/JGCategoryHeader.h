@@ -16,6 +16,8 @@
 #import "UINavigationBar+JGHandle.h"
 #import "UITableViewCell+JGExtension.h"
 
+#import "UIStatusBarManager+JGTap.h"
+
 //UIView
 #import "UIView+JGExtension.h"
 #import "UIView+Animation.h"

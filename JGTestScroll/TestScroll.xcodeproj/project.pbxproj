@@ -67,6 +67,7 @@
 		6F3EA561249B6AC2005E13A6 /* UIControl+JGBtnClickLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3EA4DA249B6AC2005E13A6 /* UIControl+JGBtnClickLimit.m */; };
 		6F3EA562249B6AC2005E13A6 /* UITextField+JGFormatNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3EA4DD249B6AC2005E13A6 /* UITextField+JGFormatNumber.m */; };
 		6F3EA576249B6AC2005E13A6 /* ZYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3EA50E249B6AC2005E13A6 /* ZYConst.m */; };
+		6FBD717624C2D23C000D8E4D /* UIStatusBarManager+JGTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD717424C2D23C000D8E4D /* UIStatusBarManager+JGTap.m */; };
 		A242BB59212CA766634FE764 /* Pods_TestScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F338FA2B549E5B5F6E9EFABC /* Pods_TestScroll.framework */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +214,8 @@
 		6F3EA50D249B6AC2005E13A6 /* ZYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYConst.h; sourceTree = "<group>"; };
 		6F3EA50E249B6AC2005E13A6 /* ZYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConst.m; sourceTree = "<group>"; };
 		6F3EA510249B6AC2005E13A6 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6FBD717424C2D23C000D8E4D /* UIStatusBarManager+JGTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStatusBarManager+JGTap.m"; sourceTree = "<group>"; };
+		6FBD717524C2D23C000D8E4D /* UIStatusBarManager+JGTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStatusBarManager+JGTap.h"; sourceTree = "<group>"; };
 		8054392A1964FB97302E1D1A /* Pods-TestScroll-TestScrollUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestScroll-TestScrollUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestScroll-TestScrollUITests/Pods-TestScroll-TestScrollUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4584FD877055E315AFA43D4 /* Pods-TestScroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestScroll.debug.xcconfig"; path = "Target Support Files/Pods-TestScroll/Pods-TestScroll.debug.xcconfig"; sourceTree = "<group>"; };
 		F338FA2B549E5B5F6E9EFABC /* Pods_TestScroll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestScroll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -495,6 +498,8 @@
 				6F3EA4A0249B6AC1005E13A6 /* UIViewController+JGPopBlock.m */,
 				6F3EA4A1249B6AC1005E13A6 /* UIScrollView+JGAllowPanGestureEventPass.m */,
 				6F3EA4A3249B6AC1005E13A6 /* UITableViewCell+JGExtension.h */,
+				6FBD717524C2D23C000D8E4D /* UIStatusBarManager+JGTap.h */,
+				6FBD717424C2D23C000D8E4D /* UIStatusBarManager+JGTap.m */,
 			);
 			path = UIOther;
 			sourceTree = "<group>";
@@ -862,6 +867,7 @@
 				6F3EA460249B69EB005E13A6 /* ZYIntegralMallCCell.m in Sources */,
 				6F3EA45D249B69EB005E13A6 /* ZYIntegralMallController.m in Sources */,
 				6F3EA557249B6AC2005E13A6 /* NSCalendar+JGExtension.m in Sources */,
+				6FBD717624C2D23C000D8E4D /* UIStatusBarManager+JGTap.m in Sources */,
 				6F3EA461249B69EB005E13A6 /* ZYIntegralMallCategoryTitleView.m in Sources */,
 				6F3EA554249B6AC2005E13A6 /* NSMutableString+JGSafe.m in Sources */,
 				6F3EA558249B6AC2005E13A6 /* NSDate+JGExtension.m in Sources */,

@@ -94,6 +94,22 @@ static NSString * const ZYIntegralMallCCellId = @"ZYIntegralMallCCellId";
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"积分商城";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBarButton];
+    
+    [JGNotification addObserver:self
+                       selector:@selector(statusBarAction:)
+                           name:@"JGStatusBarTappedNotification"
+                         object:nil];
+    
+}
+
+- (void)statusBarAction:(NSNotification *)noti{
+    //your code
+    [self.CateTitleView selectItemAtIndex:0];
+}
+
+- (void)dealloc {
+    
+    [JGNotification removeObserver:self];
 }
 
 #pragma mark - 导航栏点击 兑换记录 -
@@ -152,14 +168,6 @@ static NSString * const ZYIntegralMallCCellId = @"ZYIntegralMallCCellId";
             
             ZYIntegralMallSectionCH *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:ZYIntegralMallSectionCHId forIndexPath:indexPath];
             header.TitleLbl.text = [self.titleArrM objectAtIndex:indexPath.section-1];
-
-//            if (indexPath.section == 1) {
-//
-//                header.TitleLbl.text = @"精品图书推荐";
-//            }else {
-//
-//                header.TitleLbl.text = @"学习免流量";
-//            }
             header.BackInfo = ^(id data) {
                 [weakSelf IntegralMallSectionCHLookMoreBtnClickWithIndexPath:indexPath];
             };
@@ -187,8 +195,6 @@ static NSString * const ZYIntegralMallCCellId = @"ZYIntegralMallCCellId";
     
     
 }
-
-
 
 // 表头尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -279,14 +285,16 @@ static NSString * const ZYIntegralMallCCellId = @"ZYIntegralMallCCellId";
         
         CGPoint point = CGPointMake(0, rect.origin.y - kWidthScale(38));
         
-        CGFloat contentSizeH = self.CollectionView.contentSize.height;
+        
+        //此方法获取的高度并不准确  需要优化
+        CGFloat contentSizeH = self.CollectionView.collectionViewLayout.collectionViewContentSize.height;
         
         
 //        CGFloat offsetY = self.CollectionView.contentOffset.y;
 
 //        NSLog(@"point - %@ - %f - %f",NSStringFromCGPoint(point),contentSizeH,offsetY);
-//        NSLog(@"%f - %f - %f",contentSizeH - point.y,kDeviceHight,contentSizeH);
-        
+        JGLog(@"%f - %f - %f - %f",point.y,contentSizeH,kDeviceHight,contentSizeH - point.y);
+
         if ((contentSizeH - point.y) >= kDeviceHight) {
             [self.CollectionView setContentOffset:point animated:YES];
         }
