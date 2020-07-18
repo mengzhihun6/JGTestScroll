@@ -278,7 +278,21 @@ static NSString * const ZYIntegralMallCCellId = @"ZYIntegralMallCCellId";
         CGRect rect = attributes.frame;
         
         CGPoint point = CGPointMake(0, rect.origin.y - kWidthScale(38));
-        [self.CollectionView setContentOffset:point animated:YES];
+        
+        CGFloat contentSizeH = self.CollectionView.contentSize.height;
+        
+        
+//        CGFloat offsetY = self.CollectionView.contentOffset.y;
+
+//        NSLog(@"point - %@ - %f - %f",NSStringFromCGPoint(point),contentSizeH,offsetY);
+//        NSLog(@"%f - %f - %f",contentSizeH - point.y,kDeviceHight,contentSizeH);
+        
+        if ((contentSizeH - point.y) >= kDeviceHight) {
+            [self.CollectionView setContentOffset:point animated:YES];
+        }
+        
+        
+//        [self.CollectionView setContentOffset:point animated:YES];
     }
 }
 
